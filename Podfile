@@ -7,9 +7,9 @@ target 'rssreader' do
   use_frameworks!
 
   # Pods for rssreader
-  pod 'Alamofire', '~> 4.5'
-  pod 'AlamofireObjectMapper', '~> 4.1.0'
-  pod 'MBProgressHUD', '~> 1.0.0'
-  pod 'SDWebImage', '~> 3.8'
+  pod 'Alamofire'
+  pod 'AlamofireObjectMapper'
+  pod 'MBProgressHUD'
+  pod 'Kingfisher'
 
 end

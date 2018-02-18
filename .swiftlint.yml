@@ -1,0 +1,29 @@
+disabled_rules: # rule identifiers to exclude from running
+  - line_length
+  - trailing_whitespace
+opt_in_rules: # some rules are only opt-in
+  - empty_count
+  - missing_docs
+  - conditional_binding_cascade
+  # Find all the available rules by running:
+  # swiftlint rules
+#included: # paths to include during linting. `--path` is ignored if present.
+#  - Source
+excluded: # paths to ignore during linting. Takes precedence over `included`.
+  - Carthage
+  - Pods
+variable_name:
+  min_length: # only min_length
+    error: 0 # only error
+  excluded: # excluded via string array
+    - id
+    - URL
+    - GlobalAPIKey
+type_name:
+  min_length: 4 # only warning
+  max_length: # warning and error
+    warning: 40
+    error: 50
+  excluded: iPhone # excluded via string
+  allowedSymbols: _
+

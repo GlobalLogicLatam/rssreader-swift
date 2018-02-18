@@ -32,5 +32,9 @@
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
 	</array>
+	<key>APIKey</key>
+	<string>1c4b73654df943fcaf8090516732a734</string>
+	<key>BaseURLKey</key>
+	<string>https://api.nytimes.com/svc/</string>
 </dict>
 </plist>
