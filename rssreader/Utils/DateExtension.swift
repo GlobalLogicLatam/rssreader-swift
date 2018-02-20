@@ -9,15 +9,18 @@
 import Foundation
 
 extension Date {
-    
-    static func parseDate(_ dateString: String?) -> Date? {
-        let dateFormat = DateFormatter()
-        dateFormat.timeZone = TimeZone(abbreviation: "UTC")
-        dateFormat.dateFormat = "yyyy-MM-dd'T'HH:mm:ss'Z'"
-        if let stringToFormat = dateString {
-            return dateFormat.date(from: stringToFormat)
+    static func getFormattedDate(_ string: String?, _ formatter: String?) -> Date {
+        let dateFormatterGet = DateFormatter()
+        if let formatterVal = formatter {
+            dateFormatterGet.dateFormat = formatterVal
         } else {
-            return nil
+            dateFormatterGet.dateFormat = "yyyy-MM-dd'T'HH:mm:ss-hh:mm"
         }
+        
+        let dateFormatterPrint = DateFormatter()
+        dateFormatterPrint.dateFormat = "MMM dd, yyyy"
+        
+        let date: Date? = dateFormatterGet.date(from: string ?? Date().description)
+        return date!
     }
 }

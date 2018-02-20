@@ -11,6 +11,9 @@ import Alamofire
 
 enum TopStoriesRequestConvertible: URLRequestConvertible {
     
+    // NY Times API docs
+    // http://developer.nytimes.com
+    
     static let baseURLString = Bundle.main.object(forInfoDictionaryKey: "BaseURLKey") as? String
     static let apiKey = Bundle.main.object(forInfoDictionaryKey: "APIKey") as? String
     
@@ -31,7 +34,7 @@ enum TopStoriesRequestConvertible: URLRequestConvertible {
             urlComp.host = pathURL.host
             urlComp.scheme = pathURL.scheme
             urlComp.port = pathURL.port
-            urlComp.path = "topstories/v2/home.json"
+            urlComp.path = "/svc/topstories/v2/home.json"
             var qParams = params
             qParams["api-key"] = TopStoriesRequestConvertible.apiKey as AnyObject
             var queryStringParams = [URLQueryItem]()

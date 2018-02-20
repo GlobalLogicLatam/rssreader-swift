@@ -38,9 +38,9 @@ class RSSItem {
         }
         byline = itemDTO.byline
         itemType = itemDTO.itemType
-        updatedDate = Date.parseDate(itemDTO.updatedDate)
-        createdDate = Date.parseDate(itemDTO.createdDate)
-        publishedDate = Date.parseDate(itemDTO.publishedDate)
+        updatedDate = Date.getFormattedDate(itemDTO.updatedDate, nil)
+        createdDate = Date.getFormattedDate(itemDTO.createdDate, nil)
+        publishedDate = Date.getFormattedDate(itemDTO.publishedDate, nil)
         materialTypeFacet = itemDTO.materialTypeFacet
         kicker = itemDTO.kicker
         var multimediaArray = [RSSMultimedia]()

@@ -7,12 +7,10 @@
 //
 
 import Foundation
-import UIKit
-import Kingfisher
 
 class RSSMultimedia {
     
-    var url: UIImageView?
+    var url: URL?
     var format: String?
     var height: Int?
     var width: Int?
@@ -23,8 +21,7 @@ class RSSMultimedia {
     
     init(_ multimediaDTO: RSSMultimediaDTO) {
         if let urlImage = multimediaDTO.url {
-            url = UIImageView()
-            url?.kf.setImage(with: URL.init(string: urlImage))
+            url = URL.init(string: urlImage)
         }
         format = multimediaDTO.url
         height = multimediaDTO.height

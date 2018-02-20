@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="i5s-f8-npQ">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="AvenirNext.ttc">
+            <string>AvenirNext-DemiBold</string>
+            <string>AvenirNext-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Top StoriesVC-->
+        <scene sceneID="ap3-8H-fAh">
+            <objects>
+                <collectionViewController storyboardIdentifier="TopStoriesVC" id="i5s-f8-npQ" customClass="TopStoriesVC" customModule="rssreader" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="ZWu-Ve-opi">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <collectionViewLayout key="collectionViewLayout" id="99f-II-JDp" customClass="PinterestLayout" customModule="rssreader" customModuleProvider="target"/>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="TopStoryCollectionViewCell" id="z84-cx-GkD" customClass="TopStoryCollectionViewCell" customModule="rssreader" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="180" height="180"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="180" height="180"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="xP2-1w-SDQ" userLabel="Container View">
+                                            <rect key="frame" x="0.0" y="0.0" width="180" height="180"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="r27-DT-mg6">
+                                                    <rect key="frame" x="0.0" y="0.0" width="180" height="127"/>
+                                                    <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="Caption" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6h4-hL-grl">
+                                                    <rect key="frame" x="4" y="137" width="172" height="17"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="12"/>
+                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="Comment" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IfJ-Dr-877">
+                                                    <rect key="frame" x="4" y="156" width="172" height="14"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="10"/>
+                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="IfJ-Dr-877" secondAttribute="trailing" constant="4" id="4uv-cy-Zph"/>
+                                                <constraint firstItem="6h4-hL-grl" firstAttribute="top" secondItem="r27-DT-mg6" secondAttribute="bottom" constant="10" id="BVy-8h-5Zo"/>
+                                                <constraint firstItem="IfJ-Dr-877" firstAttribute="leading" secondItem="xP2-1w-SDQ" secondAttribute="leading" constant="4" id="FNN-cb-ynN"/>
+                                                <constraint firstItem="IfJ-Dr-877" firstAttribute="top" secondItem="6h4-hL-grl" secondAttribute="bottom" constant="2" id="RNI-Qm-sNd"/>
+                                                <constraint firstItem="6h4-hL-grl" firstAttribute="leading" secondItem="xP2-1w-SDQ" secondAttribute="leading" constant="4" id="W2B-qz-Ahj"/>
+                                                <constraint firstAttribute="trailing" secondItem="6h4-hL-grl" secondAttribute="trailing" constant="4" id="aKt-ag-OEm"/>
+                                                <constraint firstItem="r27-DT-mg6" firstAttribute="leading" secondItem="xP2-1w-SDQ" secondAttribute="leading" id="af2-8h-1fy"/>
+                                                <constraint firstAttribute="bottom" secondItem="IfJ-Dr-877" secondAttribute="bottom" constant="10" id="f9Q-sH-pWp"/>
+                                                <constraint firstAttribute="trailing" secondItem="r27-DT-mg6" secondAttribute="trailing" id="lT3-bL-1dP"/>
+                                                <constraint firstItem="r27-DT-mg6" firstAttribute="top" secondItem="xP2-1w-SDQ" secondAttribute="top" id="ybs-1d-lIl"/>
+                                            </constraints>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                    <real key="value" value="5"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </view>
+                                    </subviews>
+                                </view>
+                                <constraints>
+                                    <constraint firstItem="xP2-1w-SDQ" firstAttribute="top" secondItem="z84-cx-GkD" secondAttribute="top" id="8cu-mI-d3K"/>
+                                    <constraint firstItem="xP2-1w-SDQ" firstAttribute="leading" secondItem="z84-cx-GkD" secondAttribute="leading" id="RH1-kK-Zpa"/>
+                                    <constraint firstAttribute="bottom" secondItem="xP2-1w-SDQ" secondAttribute="bottom" id="mPA-Qp-JJ6"/>
+                                    <constraint firstAttribute="trailing" secondItem="xP2-1w-SDQ" secondAttribute="trailing" id="y46-ys-4rn"/>
+                                </constraints>
+                                <size key="customSize" width="180" height="180"/>
+                                <connections>
+                                    <outlet property="containerView" destination="xP2-1w-SDQ" id="F6b-U2-R2Y"/>
+                                    <outlet property="topStoryCaptionLB" destination="IfJ-Dr-877" id="I0H-gE-dFQ"/>
+                                    <outlet property="topStoryImageView" destination="r27-DT-mg6" id="xj3-Ro-h3j"/>
+                                    <outlet property="topStoryTitleLB" destination="6h4-hL-grl" id="LcK-EC-pKb"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="i5s-f8-npQ" id="e0C-Ym-wOn"/>
+                            <outlet property="delegate" destination="i5s-f8-npQ" id="cBi-P9-f2l"/>
+                        </connections>
+                    </collectionView>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gHP-eY-F1b" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="140" y="194"/>
+        </scene>
+    </scenes>
+</document>
