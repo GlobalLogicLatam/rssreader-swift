@@ -24,7 +24,6 @@
 		3159C1441FA2284C00D7E0F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3159C1431FA2284C00D7E0F0 /* Assets.xcassets */; };
 		317711852038C15B00677953 /* TopStoriesRequestConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317711842038C15B00677953 /* TopStoriesRequestConvertible.swift */; };
 		317711872038CA2800677953 /* RSSMultimedia.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317711862038CA2800677953 /* RSSMultimedia.swift */; };
-		3177118A2038D21400677953 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317711892038D21400677953 /* DateExtension.swift */; };
 		3177119A203A344A00677953 /* PinterestLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31771199203A344900677953 /* PinterestLayout.swift */; };
 		317711AF203A37F800677953 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 317711AD203A37F800677953 /* LaunchScreen.storyboard */; };
 		B05507572149D45FCE2320AA /* Pods_rssreader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE02817F451721C90E3FD2C0 /* Pods_rssreader.framework */; };
@@ -49,7 +48,6 @@
 		3159C1431FA2284C00D7E0F0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		317711842038C15B00677953 /* TopStoriesRequestConvertible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopStoriesRequestConvertible.swift; sourceTree = "<group>"; };
 		317711862038CA2800677953 /* RSSMultimedia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSSMultimedia.swift; sourceTree = "<group>"; };
-		317711892038D21400677953 /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
 		31771199203A344900677953 /* PinterestLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinterestLayout.swift; sourceTree = "<group>"; };
 		317711A7203A37B500677953 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		317711AE203A37F800677953 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -173,7 +171,6 @@
 		317711882038D1FC00677953 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				317711892038D21400677953 /* DateExtension.swift */,
 				31336705203BA9000022C4CC /* StringExtension.swift */,
 			);
 			path = Utils;
@@ -335,18 +332,16 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-rssreader/Pods-rssreader-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/AlamofireObjectMapper/AlamofireObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/CodableAlamofire/CodableAlamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
-				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CodableAlamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -377,7 +372,6 @@
 			files = (
 				312EF17D203A53D70068EE48 /* TopStoriesInteractor.swift in Sources */,
 				3151D164203898F4004CE686 /* RSSMultimediaDTO.swift in Sources */,
-				3177118A2038D21400677953 /* DateExtension.swift in Sources */,
 				312EF179203A53D70068EE48 /* TopStoriesPresenter.swift in Sources */,
 				311986542035B141006EF910 /* RSSItem.swift in Sources */,
 				317711872038CA2800677953 /* RSSMultimedia.swift in Sources */,
@@ -524,7 +518,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.globallogic.rssreader;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -538,7 +533,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.globallogic.rssreader;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};

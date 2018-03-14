@@ -20,10 +20,7 @@ class RSSMultimedia {
     var copyright: String?
     
     init(_ multimediaDTO: RSSMultimediaDTO) {
-        if let urlImage = multimediaDTO.url {
-            url = URL.init(string: urlImage)
-        }
-        format = multimediaDTO.url
+        url = multimediaDTO.url
         height = multimediaDTO.height
         width = multimediaDTO.width
         type = multimediaDTO.type
