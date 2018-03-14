@@ -30,17 +30,13 @@ class RSSItem {
         subsection = itemDTO.subsection
         title = itemDTO.title
         abstract = itemDTO.abstract
-        if let itemURL = itemDTO.url {
-            url = URL.init(string: itemURL)
-        }
-        if let itemShortURL = itemDTO.shortUrl {
-            shortUrl = URL.init(string: itemShortURL)
-        }
+        url = itemDTO.url
+        shortUrl = itemDTO.shortUrl
         byline = itemDTO.byline
         itemType = itemDTO.itemType
-        updatedDate = Date.getFormattedDate(itemDTO.updatedDate, nil)
-        createdDate = Date.getFormattedDate(itemDTO.createdDate, nil)
-        publishedDate = Date.getFormattedDate(itemDTO.publishedDate, nil)
+        updatedDate = itemDTO.updatedDate
+        createdDate = itemDTO.createdDate
+        publishedDate = itemDTO.publishedDate
         materialTypeFacet = itemDTO.materialTypeFacet
         kicker = itemDTO.kicker
         var multimediaArray = [RSSMultimedia]()

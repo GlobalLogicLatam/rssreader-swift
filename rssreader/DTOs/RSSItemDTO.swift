@@ -6,43 +6,40 @@
 //  Copyright © 2018 GlobalLogic. All rights reserved.
 //
 
-import ObjectMapper
+import Foundation
 
-class RSSItemDTO: Mappable {
+class RSSItemDTO: Codable {
     
     var section: String?
     var subsection: String?
     var title: String?
     var abstract: String?
-    var url: String?
-    var shortUrl: String?
+    var url: URL?
+    var shortUrl: URL?
     var byline: String?
     var itemType: String?
-    var updatedDate: String?
-    var createdDate: String?
-    var publishedDate: String?
+    var updatedDate: Date?
+    var createdDate: Date?
+    var publishedDate: Date?
     var materialTypeFacet: String?
     var kicker: String?
     var multimedia: [RSSMultimediaDTO]?
     
-    required init?(map: Map) {
-        
+    enum CodingKeys: String, CodingKey {
+        case section
+        case subsection
+        case title
+        case abstract
+        case url
+        case shortUrl = "short_url"
+        case byline
+        case itemType = "item_type"
+        case updatedDate = "updated_date"
+        case createdDate = "created_date"
+        case publishedDate = "published_date"
+        case materialTypeFacet = "material_type_facet"
+        case kicker
+        case multimedia
     }
     
-    func mapping(map: Map) {
-        section <- map["section"]
-        subsection <- map["subsection"]
-        title <- map["title"]
-        abstract <- map["abstract"]
-        url <- map["url"]
-        shortUrl <- map["short_url"]
-        byline <- map["byline"]
-        itemType <- map["item_type"]
-        updatedDate <- map["updated_date"]
-        createdDate <- map["created_date"]
-        publishedDate <- map["published_date"]
-        materialTypeFacet <- map["material_type_facet"]
-        kicker <- map["kicker"]
-        multimedia <- map["multimedia"]
-    }
 }

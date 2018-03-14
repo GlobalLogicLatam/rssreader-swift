@@ -28,7 +28,7 @@ class TopStoriesInteractor: TopStoriesBusinessLogic, TopStoriesDataStore {
         response = TopStories.Item.Response(topStories: rssItems)
         self?.presenter?.presentTopStories(response: response)
     }, failure: {[weak self] (err: Error?) in
-        print(err?.localizedDescription as Any)
+        print("ERROR: \(err?.localizedDescription ?? "Unknown error")")
         self?.presenter?.presentTopStories(response: response)
     })
     
